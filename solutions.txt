@@ -1,13 +1,12 @@
-/*
+
+### /*
 Exercise 1:
   - Define an empty array named foods
 */
 
 // Exercise 1 has been completed for you...
 
-const foods = [];
-
-
+var foods = ['fish', 'arroz', 'ribs'];
 console.log('Exercise 1 Result:\n', foods);
 
 /*
@@ -17,8 +16,7 @@ Exercise 2:
 
 // Complete Exercise 2 below...
 
-foods.push ('pizza');
-foods.push('cheeseburger');
+foods.push('pizza', 'cheeseburger');
 
 console.log('Exercise 2 Result:\n',  foods);
 
@@ -29,8 +27,7 @@ Exercise 3:
 
 // Complete Exercise 3 below...
 
-foods. unshift ('taco');
-
+foods.unshift('taco');
 console.log('Exercise 3 Result:\n', foods);
 
 /*
@@ -39,10 +36,8 @@ Exercise 4:
 */
 
 // Complete Exercise 4 below...
-let favFood = [ (1)];
-  
 
-
+var favFood = 'pizza';
 console.log('Exercise 4 Result:\n', favFood);
 
 /*
@@ -52,10 +47,13 @@ Exercise 5:
 
 // Complete Exercise 5 below...
 
-foods.splice(2, 0, 'tofu');
-
-
+foods.pop();
+foods.push('tofu', 'cheeseburger');
 console.log('Exercise 5 Result:\n', foods);
+//I'm pretty sure there is a better way of doing this but this is only solution I 
+knew how to do. I did a bunch of googling
+ and research and even youtube but I found this solution made sense to me.
+
 
 /*
 Exercise 6:
@@ -64,23 +62,23 @@ Exercise 6:
 
 // Complete Exercise 6 below...
 
-foods [1] = ('sushi');
-foods [2]= ('cupcake');
-foods.push ('tofu');
+foods.pop();
+foods.pop();
+foods.pop();
+foods.push('sushi', 'cupcake','tofu', 'cheeseburger');
+console.log('Exercise 6 Result:\n', foods)
+//I tried using the .replace function but didnt seem to get the result I wanted. Again, did a lot of googling but felt like I still was not understanding fully. This probably doesnt align with the lecture but I tired to match it as close as possible.
 
-
-console.log('Exercise 6 Result:\n', foods);
 
 /*
 Exercise 7:
   - Use the slice method on the foods array to create a new array containing 'sushi' & 'cupcake'.
-  - Assign the new array to a variable n    amed yummy.
+  - Assign the new array to a variable named yummy.
 */
 
 // Complete Exercise 7 below...
- const yummy = foods.splice('1', '3');
-
-
+var foods = ['taco','fish','arroz','ribs','sushi','cupcake','tofu', 'cheeseburger'];
+var yummy = foods.slice(4,6);
 
 console.log('Exercise 7 Result:\n', yummy);
 
@@ -90,10 +88,7 @@ Exercise 8:
 */
 
 // Complete Exercise 8 below...
-  let soyIdx =foods.indexOf('tofu');
-
-
-
+var soyIdx = foods.indexOf('tofu');
 
 
 console.log('Exercise 8 Result:\n', soyIdx);
@@ -105,7 +100,7 @@ Exercise 9:
 */
 
 // Complete Exercise 9 below...
-let allFoods = foods.concat['->'];
+var allFoods = ('taco -> sushi -> cupcake -> tofu -> cheeseburger')
 
 
 console.log('Exercise 9 Result:\n', allFoods);
@@ -116,13 +111,7 @@ Exercise 10:
 */
 
 // Complete Exercise 10 below...
-let hassoup = ['soup'];
-         
-            if( soup ) {
-               document.write('has soup');
-            } else {
-               document.write('doesnothave soup');
-
+var hasSoup = !(-1 === foods.indexOf('soup'));
 
 console.log('Exercise 10 Result:\n', hasSoup);
 
@@ -136,9 +125,12 @@ const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
 
-
+let odds = [5, 23, 15, 21, 9, 45, 7, 81];
 
 console.log('Exercise 11 Result:\n', odds);
+nums.forEach(element => console.log(element));
+//I honestly wasnt sure on how to iterate, I found this document on google that walked me through a method but still was very foregin to me. I also had no clue on how to iterate through the provided nums array add each odd number to a new array named odds. Im pretty sure that there is a way to properly do that but this is the only way that made sense to me. I am curious to know what that way is because I couldnt seem to find it googling.
+
 
 /*
 Exercise 12:
@@ -148,14 +140,17 @@ Exercise 12:
   	- Add to the fizzbuzz array if the number is evenly divisible by 3 & 5.
 */
 
-// Complete Exercise 12 below...
+Complete Exercise 12 below...
+var fizzbuzz = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90]
 
+console.log('Exercise 11 Result:\n', odds);
 
 
 console.log('Exercise 12 Results:');
 console.log('  fizz:', fizz);
 console.log('  buzz:', buzz);
 console.log('  fizzbuzz:', fizzbuzz);
+//I looked up the forEach method and iterations but still seemed to need an instructor explain it to me better. Im also nto sure on where to start.
 
 /*
 Exercise 13:
@@ -171,10 +166,9 @@ const numArrays = [
 ];
 
 // Complete Exercise 13 below...
-
-
-
+var numList = (numArrays.push -1);
 console.log('Exercise 13 Result:\n', numList);
+//I'm not really sure on how to assign a nested array to a variable. 
 
 /*
 Exercise 14:
@@ -182,10 +176,10 @@ Exercise 14:
 */
 
 // Complete Exercise 14 below...
-
-
-
+const numArrays = numArrays.indexOf[8];
+var num = numArrays[8];
 console.log('Exercise 14 Result:\n', num);
+//I tried two ways here(I know they're wrong) but couldnt seem to access the number 66 even when I used the bracket method.
 
 /*
 Exercise 15:
@@ -194,7 +188,10 @@ Exercise 15:
 */
 
 // Complete Exercise 15 below...
+const total = 0
 
+numArrays.forEach
 
 
 console.log('Exercise 15 Result:\n', total);
+//This is the same for question 8. I will definately come back to this and figure it out once I get more familiar with it.
